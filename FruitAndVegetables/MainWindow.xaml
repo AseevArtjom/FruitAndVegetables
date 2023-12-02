@@ -1,0 +1,50 @@
+﻿<Window x:Class="FruitAndVegetables.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FruitAndVegetables"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="820" Loaded="WindowLoaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="250"/>
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.Row="0">
+            <Button Click="ShowAll" Height="40" Width="180" Margin="100,0,0,0" Content="Show all" FontFamily="Arial" FontSize="16"/>
+            <Button Click="ShowNamesOfFruitsAndVegetables" Height="40" Width="260" Margin="20" Content="ShowNamesOfFruitsAndVegetables" FontFamily="Arial" FontSize="16"/>
+            <Button Click="ShowAllColors" Height="40" Width="150" Margin="20" Content="ShowAllColors" FontFamily="Arial" FontSize="16"/>
+            <Button Click="ShowMaxCal" Height="50" Width="160" Margin="150,0,0,0" FontFamily="Arial" FontSize="16">
+                <TextBlock TextWrapping="Wrap" FontSize="18">
+                    ShowMaxCal
+                </TextBlock>
+            </Button>
+            <Button Click="ShowMinCal" Height="50" Width="160" Margin="20" FontFamily="Arial" FontSize="18">
+                <TextBlock TextWrapping="Wrap">
+                    ShowMinCal
+                </TextBlock>
+            </Button>
+            <Button Click="ShowAvgCal" Height="50" Width="160" Margin="20" FontFamily="Arial" FontSize="18">
+                <TextBlock TextWrapping="Wrap">
+                    ShowAvgCal
+                </TextBlock>
+            </Button>
+            <Button Click="ShowCountOfVegetables" Height="40" Width="180" Margin="50,0,0,0" Content="ShowCountOfVegetables" FontFamily="Arial" FontSize="16"/>
+            <Button Click="ShowCountOfFruits" Height="40" Width="180" Margin="20,0,0,0" Content="ShowCountOfFruits" FontFamily="Arial" FontSize="16"/>
+            <Button Click="ShowCountOfFruitsAndVegetablesByColor" Height="40" Width="350" Margin="20,0,0,0" Content="ShowCountOfFruitsAndVegetablesByColor" FontFamily="Arial" FontSize="16"/>
+            <TextBox x:Name="NameOfColor" Height="40" Width="150" Margin="550,5,0,0" FontFamily="Arial" FontSize="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+            <Button Click="ShowCountOfAllByAllColors" Height="40" Width="220" Margin="40,0,0,0" Content="ShowCountOfAllByAllColors" FontFamily="Arial" FontSize="16"/>
+            <Button Click="ShowAllByCalDown" Height="40" Width="220" Margin="40,0,0,0" Content="ShowAllByCalDown" FontFamily="Arial" FontSize="16"/>
+            <Button Click="ShowAllByCalUp" Height="40" Width="220" Margin="40,0,0,0" Content="ShowAllByCalUp" FontFamily="Arial" FontSize="16"/>
+            <TextBox x:Name="Cal_01" Height="40" Width="150" Margin="330,5,0,0" FontFamily="Arial" FontSize="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+            <TextBox x:Name="Cal_02" Height="40" Width="150" Margin="120,5,0,0" FontFamily="Arial" FontSize="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+        </WrapPanel>
+
+        <DataGrid Grid.Row="2" x:Name="DG" Foreground="Black" FontSize="15">
+            <DataGrid.Columns>
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
